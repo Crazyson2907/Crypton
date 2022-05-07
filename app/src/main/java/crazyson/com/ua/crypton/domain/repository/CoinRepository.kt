@@ -5,7 +5,7 @@ import crazyson.com.ua.crypton.data.remote.dto.CoinDetailDTO
 
 interface CoinRepository {
 
-    suspend fun getCoins():List<CoinDTO>
+    suspend fun getCoins(): List<CoinDTO>
 
     suspend fun getCoinById(coinId: String): CoinDetailDTO
 }
