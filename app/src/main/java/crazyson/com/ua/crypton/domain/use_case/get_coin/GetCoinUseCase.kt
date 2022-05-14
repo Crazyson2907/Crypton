@@ -1,9 +1,7 @@
 package crazyson.com.ua.crypton.domain.use_case.get_coin
 
 import crazyson.com.ua.crypton.common.Resource
-import crazyson.com.ua.crypton.data.remote.dto.toCoin
 import crazyson.com.ua.crypton.data.remote.dto.toCoinDetail
-import crazyson.com.ua.crypton.domain.model.Coin
 import crazyson.com.ua.crypton.domain.model.CoinDetail
 import crazyson.com.ua.crypton.domain.repository.CoinRepository
 import kotlinx.coroutines.flow.Flow
@@ -17,13 +15,13 @@ class GetCoinUseCase @Inject constructor(
 ) {
     operator fun invoke(coinId: String): Flow<Resource<CoinDetail>> = flow {
         try {
-            emit(Resource.Loading())
+            emit(Resource.Loading<CoinDetail>())
             val coin = repository.getCoinById(coinId).toCoinDetail()
-            emit(Resource.Success(coin))
+            emit(Resource.Success<CoinDetail>(coin))
         } catch (e: HttpException) {
-            emit(Resource.Error(e.localizedMessage ?: "An unexpected error occurred"))
+            emit(Resource.Error<CoinDetail>(e.localizedMessage ?: "An unexpected error occurred"))
         } catch (e: IOException) {
-            emit(Resource.Error("Couldn't reach server. Check your internet connection"))
+            emit(Resource.Error<CoinDetail>("Couldn't reach server. Check your internet connection"))
         }
     }
 }

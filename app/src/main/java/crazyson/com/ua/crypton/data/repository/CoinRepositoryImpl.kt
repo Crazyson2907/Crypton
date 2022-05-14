@@ -1,4 +1,4 @@
-package crazyson.com.ua.crypton.data.repositiry
+package crazyson.com.ua.crypton.data.repository
 
 import crazyson.com.ua.crypton.data.remote.CoinPaprikaApi
 import crazyson.com.ua.crypton.data.remote.dto.CoinDTO

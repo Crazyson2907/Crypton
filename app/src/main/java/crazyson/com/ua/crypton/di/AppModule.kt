@@ -2,7 +2,7 @@ package crazyson.com.ua.crypton.di
 
 import crazyson.com.ua.crypton.common.Constants
 import crazyson.com.ua.crypton.data.remote.CoinPaprikaApi
-import crazyson.com.ua.crypton.data.repositiry.CoinRepositoryImpl
+import crazyson.com.ua.crypton.data.repository.CoinRepositoryImpl
 import crazyson.com.ua.crypton.domain.repository.CoinRepository
 import dagger.Module
 import dagger.Provides

@@ -6,7 +6,7 @@ import crazyson.com.ua.crypton.domain.model.Coin
 data class CoinDTO(
     val id: String,
     @SerializedName("is_active")
-    val is_active: Boolean,
+    val isActive: Boolean,
     @SerializedName("is_new")
     val is_new: Boolean,
     val name: String,
@@ -18,7 +18,7 @@ data class CoinDTO(
 fun CoinDTO.toCoin(): Coin {
     return Coin(
         id = id,
-        is_active = is_active,
+        isActive = isActive,
         name = name,
         rank = rank,
         symbol = symbol
