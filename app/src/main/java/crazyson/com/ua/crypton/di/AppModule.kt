@@ -18,13 +18,14 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesPaprikaApi(): CoinPaprikaApi{
+    fun providesPaprikaApi(): CoinPaprikaApi {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CoinPaprikaApi::class.java)
     }
+
     @Provides
     @Singleton
     fun provideCoinRepository(api: CoinPaprikaApi): CoinRepository {

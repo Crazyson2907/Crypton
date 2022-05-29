@@ -1,6 +1,5 @@
 package crazyson.com.ua.crypton.domain.model
 
-
 data class Coin(
     val id: String,
     val isActive: Boolean,
