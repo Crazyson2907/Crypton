@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#202020</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/cr_rw</item> //ic_crypto_review
+        <item name="windowSplashScreenBackground">#FFEB3B</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_crypto_review</item>//cr_rw
         <item name="postSplashScreenTheme">@style/Theme.Crypton</item>
     </style>
 </resources>
