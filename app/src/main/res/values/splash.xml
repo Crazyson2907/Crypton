@@ -3,7 +3,7 @@
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#FFEB3B</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_crypto_review</item>//cr_rw
+        <item name="windowSplashScreenAnimatedIcon">@drawable/cr_rw_outlined</item>//ic_crypto_review
         <item name="postSplashScreenTheme">@style/Theme.Crypton</item>
     </style>
 </resources>
