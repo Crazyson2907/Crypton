@@ -1,2 +1,2 @@
 # Crypton
-An app using CoinGeko api
+An app using Jetpack Compose
