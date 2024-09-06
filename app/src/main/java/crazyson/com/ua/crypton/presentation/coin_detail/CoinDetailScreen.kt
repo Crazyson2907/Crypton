@@ -41,15 +41,15 @@ fun CoinDetailScreen(
                             style = MaterialTheme.typography.h2,
                             modifier = Modifier.weight(8f)
                         )
-                        Text(
-                            text = if (coin.isActive) "active" else "inactive",
-                            color = if (coin.isActive) Color.Green else Color.Red,
-                            fontStyle = FontStyle.Italic,
-                            textAlign = TextAlign.End,
-                            modifier = Modifier
-                                .align(CenterVertically)
-                                .weight(2f)
-                        )
+//                        Text(
+//                            text = if (coin.isActive) "active" else "inactive",
+//                            color = if (coin.isActive) Color.Green else Color.Red,
+//                            fontStyle = FontStyle.Italic,
+//                            textAlign = TextAlign.End,
+//                            modifier = Modifier
+//                                .align(CenterVertically)
+//                                .weight(2f)
+//                        )
                     }
                     Spacer(modifier = Modifier.height(15.dp))
                     Text(
