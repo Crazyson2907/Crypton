@@ -1,22 +1,16 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
-        compose_version = '1.2.0-rc02'
+        compose_compiler = '1.5.14'       // works with Kotlin 1.9.24
+        compose_bom = '2024.10.00'        // aligns compose artifacts
+        kotlin_ver = '1.9.24'
+        agp_ver = '8.5.2'
+        hilt_ver = '2.52'
     }
-    repositories {
-        google()
-        mavenCentral()
-    }
+    repositories { google(); mavenCentral() }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.3.0'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
-        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.40.5'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath "com.android.tools.build:gradle:${agp_ver}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_ver}"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:${hilt_ver}"
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
